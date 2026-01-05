@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact | The Powerpuff Girls</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page2">
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">The Powerpuff Girls</div>
+
+    <div class="time-box">
+        <div id="ucapan"></div>
+        <div id="jam"></div>
+    </div>
+
+    <nav class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index(2).html">Characters</a>
+        <a href="index(3).html">Villains</a>
+        <a href="index(c).html">Contact</a>
+    </nav>
+</header>
+
+<!-- CONTACT -->
+<div class="contact-container">
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<!--FOOTER-->
+<footer class="footer">
+    <p>Nama: Putri Amalia Nur'aini | NIM: 251011700237 | Kelas: 01SIFP004</p>
+</footer>
+
+<!-- REAL TIME -->
+<script>
+function updateWaktu() {
+    const sekarang = new Date();
+    const jam = sekarang.getHours();
+    const menit = sekarang.getMinutes();
+    const detik = sekarang.getSeconds();
+
+    let ucapan = "";
+
+    if (jam >= 5 && jam < 12) ucapan = "Selamat Pagi ";
+    else if (jam >= 12 && jam < 15) ucapan = "Selamat Siang ";
+    else if (jam >= 15 && jam < 18) ucapan = "Selamat Sore ";
+    else ucapan = "Selamat Malam ";
+
+    const waktuString =
+        String(jam).padStart(2, '0') + ":" +
+        String(menit).padStart(2, '0') + ":" +
+        String(detik).padStart(2, '0');
+
+    document.getElementById("ucapan").innerHTML = ucapan;
+    document.getElementById("jam").innerHTML = waktuString;
+}
+
+setInterval(updateWaktu, 1000);
+updateWaktu();
+</script>
+
+</body>
+</html>

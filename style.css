@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  padding: 12px 20px;
+
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+
+.navbar a:hover {
+    color: #ff6f91;
+}
+
+.navbar a:active {
+    color: #ff1493;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 100vh;
+    background-image: url(gambar/powerpuff\ girls.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.art-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #f4356b;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    position: relative;
+    word-wrap: break-word;
+}
+
+/* ================= ABOUT ================= */
+.about {
+    padding: 120px 80px;
+}
+
+.about-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.about-image img {
+    width: 350px;
+    max-width: 90%;
+    border-radius: 5px;
+}
+
+.about-text {
+    max-width: 500px;
+    text-align: center;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* ================= TOWNSVILLE ================= */
+.townsville {
+  padding: 80px 60px;
+}
+
+.townsville-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.townsville-text {
+  flex: 1;
+}
+
+.townsville-text h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.townsville-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.townsville-image {
+  flex: 1;
+  text-align: right;
+}
+
+.townsville-image img {
+  width: 420px;
+  border-radius: 20px;
+}
+
+
+/* ================= CHARACTERS ================= */
+.characters {
+    padding: 100px 80px;
+    text-align: center;
+}
+
+.character-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; 
+    margin-top: 40px;
+}
+
+.character-card {
+    background: rgba(255,255,255,0.85);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+}
+
+.character-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease;
+}
+
+/* Warna nama */
+.character-card:nth-child(1) h3 { color: #ff69b4; }
+.character-card:nth-child(2) h3 { color: #1e90ff; }
+.character-card:nth-child(3) h3 { color: #32cd32; }
+
+/* Hover */
+.character-card:hover img {
+    transform: scale(1.15) rotate(4deg);
+}
+
+/* ================= ANIMATION ================= */
+.animate {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.6s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.step-1 { transition-delay: 0.1s; }
+.step-2 { transition-delay: 0.3s; }
+.step-3 { transition-delay: 0.5s; }
+.step-4 { transition-delay: 0.7s; }
+
+/* ================= PAGE 2 BACKGROUND ================= */
+body.page2 {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    background-attachment: fixed;
+}
+
+/* ================= VILLAINS ================= */
+.villains {
+    padding: 120px 40px;
+    text-align: center;
+    background: linear-gradient(#ffb6b6, #ffdede);
+}
+
+.section-title {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+/* Card container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    width: 280px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.card img {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Text colors */
+.mojo { color: #7e57c2; }
+.him { color: #d32f2f; }
+.fuzzy { color: #ff9800; }
+.princess { color: #e91e63; }
+.gangreen { color: #4caf50; }
+.sedusa { color: #9c27b0; }
+
+
+/* ================= CONTACT ================= */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: transparent;  
+    padding: 20px;
+    gap: 50px;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: 350px;
+    max-width: 90%;
+}
+
+.contact-form h2 {
+    margin-bottom: 25px;
+    color: #ff3399;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff3399;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* ================= SECTION INFO ================= */
+.section-info {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-info h2 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+.section-info p, .section-info ul {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.section-info ul {
+    list-style: disc inside;
+}
+
+.time-box {
+    text-align: center;
+    color: white;
+    margin-right: 20px;
+}
+
+#ucapan {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#jam {
+    font-size: 16px;
+}
+.footer {
+    background-color: #ff9a9e;  
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    width: 100%;
+    position: relative;  
+    bottom: 0;
+}
+
+.footer p {
+    margin: 0;
+}

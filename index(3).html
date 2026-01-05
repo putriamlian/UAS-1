@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Powerpuff Girls - Villains</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page2">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">The Powerpuff Girls</div>
+    <nav class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index(2).html">Characters</a>
+      <a href="index(3).html">Villains</a>
+      <a href="index(c).html">Contact</a>
+    </nav>
+  </header>
+
+<section class="villains">
+
+<h2 class="section-title animate">Villains</h2>
+
+<div class="card-container">
+
+<div class="card animate">
+<img src="gambar/1459528764-mojo-jojo-completo.webp">
+<h3 class="mojo">Mojo Jojo</h3>
+<p>Musuh utama yang sangat cerdas dan licik. Ia sering merencanakan kejahatan dengan teknologi canggih.</p>
+</div>
+
+<div class="card animate">
+<img src="gambar/OIP (5).webp">
+<h3 class="him">HIM</h3>
+<p>Makhluk paling menyeramkan dengan kekuatan gelap yang dapat memanipulasi emosi dan ketakutan.</p>
+</div>
+
+<div class="card animate">
+<img src="gambar/OIP (7).webp">
+<h3 class="fuzzy">Fuzzy Lumpkins</h3>
+<p>Makhluk pemarah dan kasar yang sangat protektif terhadap wilayahnya sendiri.</p>
+</div>
+
+<div class="card animate">
+<img src="gambar/Princess_Morbucks_2016_profile.webp">
+<h3 style="color:#e91e63;">Princess Morbucks</h3>
+<p>Gadis kaya yang iri terhadap Powerpuff Girls dan berusaha menjadi pahlawan palsu.</p>
+</div>
+
+<div class="card animate">
+<img src="gambar/Gangreen_Gang.webp">
+<h3 style="color:#4caf50;">Gangreen Gang</h3>
+<p>Sekelompok preman yang suka membuat kekacauan di Townsville.</p>
+</div>
+
+<div class="card animate">
+<img src="gambar/Sedusa.webp">
+<h3 style="color:#9c27b0;">Sedusa</h3>
+<p>Penjahat licik yang ahli menyamar dan sering menipu orang.</p>
+</div>
+
+</div>
+</section>
+
+<!--FOOTER-->
+<footer class="footer">
+    <p>Nama: Putri Amalia Nur'aini | NIM: 251011700237 | Kelas: 01SIFP004</p>
+</footer>
+
+<script>
+const animatedElements = document.querySelectorAll('.animate');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+animatedElements.forEach(el => observer.observe(el));
+</script>
+
+
+</body>
+</html>

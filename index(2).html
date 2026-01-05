@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Powerpuff Girls – Characters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page2">
+
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">The Powerpuff Girls</div>
+    <nav class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index(2).html">Characters</a>
+      <a href="index(3).html">Villains</a>
+      <a href="index(c).html">Contact</a>
+    </nav>
+  </header>
+
+  <!--content-->
+  <!-- CHARACTERS SECTION -->
+  <section class="section characters" id="characters">
+    <h2 class="animate step-1">Characters</h2>
+
+    <div class="character-container">
+      <!-- BLOSSOM -->
+      <div class="character-card animate step-2">
+        <img src="gambar/OIP (1).webp" alt="Blossom">
+        <h3>Blossom</h3><br>
+        <p>Pemimpin The Powerpuff Girls yang pintar dan penuh strategi. Dengan pita merah di rambutnya dan sikap yang tenang, dia selalu tahu cara menghadapi masalah. Blossom bukan hanya bijaksana, tapi juga pemberani, selalu memimpin timnya melawan kejahatan dengan kepala dingin dan penuh percaya diri.</p>
+      </div>
+
+      <!-- BUBBLES -->
+      <div class="character-card animate step-3">
+        <img src="gambar/OIP (3).webp" alt="Bubbles">
+        <h3>Bubbles</h3><br>
+        <p>Anggota yang paling manis dan ceria. Dengan rambut kuncir biru dan senyum yang selalu mengembang, dia suka sekali dengan binatang dan hal-hal lucu. Meski terlihat lembut dan polos, Bubbles memiliki kekuatan super yang hebat, bisa terbang, dan sering menjadi “hati” tim, menebarkan keceriaan bahkan di saat-saat sulit.</p>
+      </div>
+
+      <!-- BUTTERCUP -->
+      <div class="character-card animate step-4">
+        <img src="gambar/OIP (4).webp" alt="Buttercup">
+        <h3>Buttercup</h3><br>
+        <p>Anggota paling pemberani dan tangguh. Dengan rambut hitam pendek dan sikap tomboy, dia tidak takut menghadapi musuh. Buttercup sedikit pemarah dan keras kepala, tapi sangat setia pada teman-temannya. Dengan kekuatan fisik luar biasa dan kemampuan bertarung hebat, dia selalu siap menjadi benteng pertahanan tim dalam setiap pertarungan.</p>
+      </div>
+    </div>
+  </section>
+   
+  <!--FOOTER-->
+<footer class="footer">
+    <p>Nama: Putri Amalia Nur'aini | NIM: 251011700237 | Kelas: 01SIFP004</p>
+</footer>
+
+  <!-- JAVASCRIPT ANIMASI -->
+  <script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        const group = entry.target.closest('.characters')
+          .querySelectorAll('.animate');
+
+        group.forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add('show');
+          }, index * 300);   // ⏱️ delay antar elemen
+        });
+
+        observer.disconnect(); // supaya tidak trigger ulang
+      }
+    });
+  }, { threshold: 0.3 });
+
+  document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+</script>
+
+
+</body>
+</html>

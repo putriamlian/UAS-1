@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Powerpuff Girls</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page2">
+
+<!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">The Powerpuff Girls</div>
+    <nav class="nav-links">
+      <a href="index.html#home">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index(2).html">Characters</a>
+      <a href="index(3).html">Villains</a>
+      <a href="index(c).html">Contact</a>
+    </nav>
+  </header>
+
+<!--content-->
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="art-overlay"></div>
+    <h1 class="animate step-1">Welcome To The Powerpuff Girls Website</h1>
+  </div>
+</section>
+<!-- ABOUT ME -->
+<section class="about" id="about">
+  <div class="about-container">
+    <!-- FOTO -->
+    <div class="about-image animate step-1">
+      <img src="gambar/banner powerpuff girls.png">
+    </div>
+    <!-- TEKS -->
+    <div class="about-text">
+      <h2 class="animate step-2">About The Powerpuff Girls</h2>
+      <p class="animate step-3">
+        Powerpuff Girls adalah trio gadis super yang diciptakan oleh Profesor Utonium untuk melindungi kota Townsville dari kejahatan.
+        Mereka memiliki kekuatan super yang berasal dari ramuan gula, rempah-rempah, dan zat kimia khusus yang dikenal sebagai Chemical X.
+        Ketiga gadis ini, Blossom, Bubbles, dan Buttercup, memiliki karakteristik unik dan berperan penting dalam menyelamatkan kota dari berbagai monster dan penjahat.
+        Mereka juga dikenal sebagai pahlawan super yang mendikasikan hidup mereka untuk memerangi kejahatan dan menjaga kesejahteraan masyarakat.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- TOWNSVILLE -->
+<section class="townsville">
+  <div class="townsville-container">
+
+    <!-- TEKS -->
+    <div class="townsville-text">
+      <h2 class="animate step-2">Townsville</h2>
+      <p class="animate step-3">
+        Townsville adalah kota fiktif yang menjadi latar utama dalam serial
+        The Powerpuff Girls. Kota ini merupakan tempat tinggal Professor
+        Utonium dan pusat aktivitas Blossom, Bubbles, serta Buttercup.
+      </p>
+      <p class="animate step-3">
+        Walaupun terlihat sebagai kota yang damai dan modern, Townsville
+        sering berada dalam bahaya akibat serangan monster dan penjahat
+        super. Berkat The Powerpuff Girls, kota ini selalu berhasil
+        diselamatkan.
+      </p>
+    </div>
+
+    <!-- FOTO -->
+    <div class="townsville-image animate step-1">
+      <img src="gambar/townsville.webp" alt="Townsville">
+    </div>
+
+  </div>
+</section>
+
+
+<!--FOOTER-->
+<footer class="footer">
+    <p>Nama: Putri Amalia Nur'aini | NIM: 251011700237 | Kelas: 01SIFP004</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+  const items = document.querySelectorAll('.animate');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.3 });
+
+  items.forEach(item => observer.observe(item));
+</script>
+</body>
+</html>
